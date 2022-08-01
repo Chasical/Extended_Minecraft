@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "extended_minecraft:block/cosmic_waste" }
+  }
+}

@@ -1,6 +1,7 @@
 package com.github.chasical.extended_minecraft.item;
 
 import com.github.chasical.extended_minecraft.ExtendedMinecraft;
+import com.github.chasical.extended_minecraft.gui.ModCreativeTab;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
@@ -15,7 +16,8 @@ public class ModItem {
 
     public static final RegistryObject<Item> END_ROCK = ITEMS.register("end_rock",
             () -> new Item(new Item.Properties()
-                    .tab(CreativeModeTab.TAB_MISC)));
+                    .tab(ModCreativeTab.EM_END_TAB)
+            ));
 
 
 

@@ -2,6 +2,8 @@ package com.github.chasical.extended_minecraft;
 
 import com.github.chasical.extended_minecraft.block.ModBlock;
 import com.github.chasical.extended_minecraft.item.ModItem;
+import com.github.chasical.extended_minecraft.world.biomemods.ModBiomeModifier;
+import com.github.chasical.extended_minecraft.world.feature.ModPlacedFeature;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -26,6 +28,10 @@ public class ExtendedMinecraft
         ModItem.register(eventBus);
         ModBlock.register(eventBus);
 
+        ModBiomeModifier.register(eventBus);
+
+        ModPlacedFeature.register(eventBus);
+
         eventBus.addListener(this::setup);
 
         // Register ourselves for server and other game events we are interested in
@@ -36,6 +42,5 @@ public class ExtendedMinecraft
     {
         // some preinit code
         LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
 }

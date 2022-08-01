@@ -1,6 +1,7 @@
 package com.github.chasical.extended_minecraft.block;
 
 import com.github.chasical.extended_minecraft.ExtendedMinecraft;
+import com.github.chasical.extended_minecraft.gui.ModCreativeTab;
 import com.github.chasical.extended_minecraft.item.ModItem;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -20,12 +21,17 @@ public class ModBlock {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, ExtendedMinecraft.MOD_ID);
 
-
+    //Registration Starts Here
 
     public static final RegistryObject<Block> CRACKED_END_STONE = registerBlock("cracked_end_stone",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
-                    .strength(5f).requiresCorrectToolForDrops()), CreativeModeTab.TAB_MISC);
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeTab.EM_END_TAB);
 
+    public static final RegistryObject<Block> COSMIC_WASTE = registerBlock("cosmic_waste",
+            () -> new Block(BlockBehaviour.Properties.of(Material.STONE)
+                    .strength(5f).requiresCorrectToolForDrops()), ModCreativeTab.EM_END_TAB);
+
+    //Registration Ends Here
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn, tab);

@@ -1,5 +1,9 @@
 {
   "item.extended_minecraft.end_rock": "End Rock",
-  "block.extended_minecraft.cracked_end_stone": "Cracked End Stone"
+
+  "block.extended_minecraft.cracked_end_stone": "Cracked End Stone",
+  "block.extended_minecraft.cosmic_waste": "Cosmic Waste",
+
+  "itemGroup.em_end_tab": "Extended End Content"
 
 }

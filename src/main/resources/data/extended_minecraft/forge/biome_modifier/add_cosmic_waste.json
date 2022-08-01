@@ -1,0 +1,5 @@
+{
+  "type": "extended_minecraft:ores",
+  "biomes": "#minecraft:is_end",
+  "feature": "extended_minecraft:ore_cosmic_waste_large"
+}
